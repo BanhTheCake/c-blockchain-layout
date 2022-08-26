@@ -53,7 +53,7 @@ const Navbar = () => {
                 />
             </div>
             {toggle && (
-                <ul ref={menuRef} className="md:hidden absolute top-[100%] right-2  p-4 white-glassmorphism w-[400px] max-w-semiFull animate-slideLeft text-base z-20">
+                <ul ref={menuRef} className="md:hidden absolute top-[100%] right-0 p-4 white-glassmorphism w-[400px] max-w-full animate-slideLeft text-base z-20 flex flex-col">
                     {['Market', 'Exchange', 'Tutorials', 'Wallets'].map(
                         (item, index) => {
                             return (
