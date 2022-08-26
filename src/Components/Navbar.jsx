@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="text-white flex py-4 items-center justify-between relative">
             <div className="2xl:w-[250px] md:w-[150px] w-[140px] mr-8 shrink-0 flex">
-                <img className="w-full" src={Logo} alt="" />
+                <img className="w-full h-full" src={Logo} alt="" />
             </div>
             <ul className="hidden md:flex justify-center items-center flex-1">
                 {['Market', 'Exchange', 'Tutorials', 'Wallets'].map(
