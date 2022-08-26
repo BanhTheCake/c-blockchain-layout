@@ -5,7 +5,7 @@ import { AiOutlineHeart } from 'react-icons/ai'
 
 const ServiceItem = ({ title, subtext, icon, color }) => {
     return (
-        <div className="white-glassmorphism p-5 flex mb-8 md:mb-4 w-full max-w-[1100px] mx-auto shadow-sm hover:shadow-lg transition-all cursor-pointer">
+        <div className="white-glassmorphism p-5 flex mb-8 md:mb-4 w-full max-w-[1000px] mx-auto shadow-sm hover:shadow-lg transition-all cursor-pointer">
             <div
                 className={`w-[2.6rem] h-[2.6rem] rounded-full ${
                     color || 'bg-purple-500'

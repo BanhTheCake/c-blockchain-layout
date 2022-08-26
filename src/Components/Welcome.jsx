@@ -72,7 +72,7 @@ const Welcome = () => {
                     <p className="mt-auto">0x232...23sf</p>
                     <p className="font-semibold tracking-wide">Ethereum</p>
                 </div>
-                <form className="max-w-[100%] w-[600px] md:max-w-[450px] 2xl:w-[700px] 2xl:max-w-[700px] mx-auto p-4 sm:p-8 blue-glassmorphism">
+                <form className="max-w-[100%] w-[600px] md:max-w-[450px] 2xl:w-[700px] 2xl:max-w-[650px] mx-auto p-4 sm:p-8 blue-glassmorphism">
                     <Input label="Your Name" />
                     <Input label="Amount" />
                     <Input label="Keyword (Gif)" />
