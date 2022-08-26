@@ -1,9 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Logo from '../assets/logo.png';
 import { AiOutlineMenuFold } from 'react-icons/ai';
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
+    const menuRef = useRef(null)
+    const buttonRef = useRef(null)
+
+    const handleClickOutsideMenu = (e) => {
+        if (menuRef.current.contains(e.target) || buttonRef.current.contains(e.target) && toggle) return;
+        setToggle(!toggle)
+    }
+
+    useEffect(() => {
+        if (toggle && menuRef.current) {
+            window.addEventListener('click', handleClickOutsideMenu)
+        }
+
+        return () => {
+            if (toggle) {
+                window.removeEventListener('click', handleClickOutsideMenu)
+            }
+        }
+    }, [toggle])    
 
     return (
         <div className="text-white flex py-4 items-center justify-between relative">
@@ -27,14 +46,14 @@ const Navbar = () => {
                     <a href="">Login</a>
                 </li>
             </ul>
-            <div className="p-2" onClick={() => setToggle(!toggle)}>
+            <div ref={buttonRef} className="p-2" onClick={() => setToggle(!toggle)}>
                 <AiOutlineMenuFold
                     size={30}
                     className="cursor-pointer md:hidden"
                 />
             </div>
             {toggle && (
-                <ul className="md:hidden absolute top-[100%] right-2  p-4 white-glassmorphism w-[400px] max-w-semiFull animate-slideLeft text-base z-20">
+                <ul ref={menuRef} className="md:hidden absolute top-[100%] right-2  p-4 white-glassmorphism w-[400px] max-w-semiFull animate-slideLeft text-base z-20">
                     {['Market', 'Exchange', 'Tutorials', 'Wallets'].map(
                         (item, index) => {
                             return (

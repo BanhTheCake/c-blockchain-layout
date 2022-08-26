@@ -43,8 +43,8 @@ const TransactionsItem = ({
                 <p>{amount}</p>
             </div>
             <p className="break-all mb-4 flex-1">Message: {message}</p>
-            <div className="aspect-video relative mb-4">
-                <img className="w-full h-[200px] object-cover" src={gif} alt="gif" />
+            <div className="aspect-video relative mb-4 h-[200px]">
+                <img className="w-full h-full object-cover" src={gif} alt="gif" />
                 <span className="block absolute bottom-0 left-[50%] table translate-x-[-50%] translate-y-[50%] whitespace-nowrap px-4 py-2 bg-black rounded-[6px] text-cyan-400">
                     {timeSlamp}
                 </span>
